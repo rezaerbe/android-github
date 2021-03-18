@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Observability</string>
+
+    <string name="update_user">Update username</string>
+</resources>

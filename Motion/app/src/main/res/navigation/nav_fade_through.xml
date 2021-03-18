@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_fade_through"
+    app:startDestination="@id/cheeseCardFragment">
+
+    <fragment
+        android:id="@+id/cheeseCardFragment"
+        android:name="com.erbe.motion.demo.navfadethrough.CheeseCardFragment"
+        android:label="CheeseCardFragment">
+        <action
+            android:id="@+id/action_article"
+            app:destination="@id/cheeseArticleFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cheeseArticleFragment"
+        android:name="com.erbe.motion.demo.navfadethrough.CheeseArticleFragment"
+        android:label="CheeseArticleFragment">
+        <argument
+            android:name="cheeseId"
+            app:argType="long" />
+    </fragment>
+
+</navigation>

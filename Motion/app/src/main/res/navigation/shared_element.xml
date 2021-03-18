@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shared_element"
+    app:startDestination="@id/cheeseGridFragment">
+
+    <fragment
+        android:id="@+id/cheeseGridFragment"
+        android:name="com.erbe.motion.demo.sharedelement.CheeseGridFragment"
+        android:label="CheeseGridFragment">
+        <action
+            android:id="@+id/action_detail"
+            app:destination="@id/cheeseDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cheeseDetailFragment"
+        android:name="com.erbe.motion.demo.sharedelement.CheeseDetailFragment"
+        android:label="CheeseDetailFragment">
+        <argument
+            android:name="cheeseId"
+            app:argType="long" />
+    </fragment>
+
+</navigation>

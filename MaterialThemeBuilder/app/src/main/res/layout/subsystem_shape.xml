@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/keyline_5"
+    android:paddingBottom="@dimen/keyline_5"
+    android:paddingStart="@dimen/keyline_4"
+    android:paddingEnd="@dimen/keyline_4">
+
+    <com.erbe.materialthemebuilder.widget.LabelLinkView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/keyline_4"
+        android:text="@string/label_shape_system_title"
+        app:leadingIcon="@drawable/ic_rounded_corner_24dp"
+        app:linkUrl="https://material.io/design/shape/about-shape.html" />
+
+    <com.erbe.materialthemebuilder.widget.ShapeAttributeView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="shapeAppearanceSmallComponent"
+        app:shapeAppearance="?attr/shapeAppearanceSmallComponent"
+        app:shapeSizeLetter="@string/shape_appearance_small_label"
+        app:shapeStrokeColor="?attr/colorOnBackground"
+        app:shapeFillColor="?attr/colorControlHighlight"
+        android:layout_marginTop="@dimen/keyline_2"
+        android:layout_marginBottom="@dimen/keyline_2"
+        tools:ignore="HardcodedText" />
+
+    <com.erbe.materialthemebuilder.widget.ShapeAttributeView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="shapeAppearanceMediumComponent"
+        app:shapeAppearance="?attr/shapeAppearanceMediumComponent"
+        app:shapeSizeLetter="@string/shape_appearance_medium_label"
+        app:shapeStrokeColor="?attr/colorOnBackground"
+        app:shapeFillColor="?attr/colorControlHighlight"
+        android:layout_marginTop="@dimen/keyline_2"
+        android:layout_marginBottom="@dimen/keyline_2"
+        tools:ignore="HardcodedText" />
+
+    <com.erbe.materialthemebuilder.widget.ShapeAttributeView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="shapeAppearanceLargeComponent"
+        app:shapeAppearance="?shapeAppearanceLargeComponent"
+        app:shapeSizeLetter="@string/shape_appearance_large_label"
+        app:shapeStrokeColor="?attr/colorOnBackground"
+        app:shapeFillColor="?attr/colorControlHighlight"
+        android:layout_marginTop="@dimen/keyline_2"
+        android:layout_marginBottom="@dimen/keyline_2"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

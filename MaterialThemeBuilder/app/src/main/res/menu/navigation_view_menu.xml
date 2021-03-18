@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_item_one"
+        android:title="@string/text_body_2"
+        android:icon="@drawable/ic_inbox_24dp"
+        android:checkable="true" />
+
+    <item
+        android:id="@+id/nav_item_two"
+        android:title="@string/text_body_2"
+        android:icon="@drawable/ic_star_24dp"
+        android:checkable="true" />
+
+    <item
+        android:id="@+id/nav_item_three"
+        android:title="@string/text_body_2"
+        android:icon="@drawable/ic_bookmark_24dp"
+        android:checkable="true" />
+
+    <item
+        android:id="@+id/nav_item_four"
+        android:title="@string/text_body_2"
+        android:icon="@drawable/ic_send_24dp"
+        android:checkable="true" />
+
+</menu>
