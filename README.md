@@ -1,6 +1,6 @@
 # Android On Github
 
-Android on github are collections of android implementation officially from the source
+Android on github are collections of android implementation officially from the source.
 
 ### [Android Sunflower](https://github.com/android/sunflower)
 
