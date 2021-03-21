@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <import type="android.view.View" />
 
         <import type="androidx.core.content.ContextCompat" />
@@ -85,7 +84,9 @@
                         android:layout_gravity="center"
                         android:layout_marginBottom="@dimen/list_item_padding"
                         android:text="@{context.getString(viewmodel.noTasksLabel)}" />
+
                 </LinearLayout>
+
             </RelativeLayout>
 
         </com.erbe.architecture.ScrollChildSwipeRefreshLayout>
@@ -99,6 +100,7 @@
             app:fabSize="normal"
             app:layout_anchor="@id/refresh_layout"
             app:layout_anchorGravity="bottom|right|end" />
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</layout>
 
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

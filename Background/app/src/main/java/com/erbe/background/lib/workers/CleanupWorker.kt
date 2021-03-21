@@ -9,7 +9,7 @@ import java.io.File
 
 /** Clears temporary files. */
 class CleanupWorker(appContext: Context, workerParams: WorkerParameters) :
-        Worker(appContext, workerParams) {
+    Worker(appContext, workerParams) {
 
     override fun doWork(): Result {
         return try {

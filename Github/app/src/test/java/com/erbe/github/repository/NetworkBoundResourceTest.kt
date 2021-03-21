@@ -20,9 +20,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
-import org.mockito.Mockito.reset
-import org.mockito.Mockito.verify
-import org.mockito.Mockito.verifyNoMoreInteractions
+import org.mockito.Mockito.*
 import retrofit2.Response
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicBoolean

@@ -4,7 +4,7 @@ import androidx.arch.core.executor.testing.CountingTaskExecutorRule
 import androidx.test.espresso.IdlingRegistry
 import androidx.test.espresso.IdlingResource
 import org.junit.runner.Description
-import java.util.UUID
+import java.util.*
 import java.util.concurrent.CopyOnWriteArrayList
 import java.util.concurrent.TimeUnit
 

@@ -23,5 +23,4 @@ class Match : Fragment() {
         }
         return view
     }
-
 }

@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewmodel"
             type="com.erbe.livedata.LiveDataViewModel" />
@@ -107,5 +106,7 @@
             android:layout_height="56dp"
             android:onClick="@{() -> viewmodel.onRefresh()}"
             android:text="@string/refresh_label" />
+
     </LinearLayout>
+
 </layout>

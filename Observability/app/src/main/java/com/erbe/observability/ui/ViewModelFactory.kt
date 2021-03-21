@@ -9,6 +9,7 @@ import com.erbe.observability.persistence.UserDao
  */
 class ViewModelFactory(private val dataSource: UserDao) : ViewModelProvider.Factory {
 
+    @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(UserViewModel::class.java)) {
             return UserViewModel(dataSource) as T

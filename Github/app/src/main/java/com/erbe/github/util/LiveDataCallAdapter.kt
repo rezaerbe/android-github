@@ -1,6 +1,5 @@
 package com.erbe.github.util
 
-
 import androidx.lifecycle.LiveData
 import com.erbe.github.api.ApiResponse
 import retrofit2.Call

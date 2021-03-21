@@ -9,7 +9,6 @@
     tools:context="com.erbe.navigationsample.ResultsWinner"
     tools:layout_editor_absoluteY="81dp">
 
-
     <TextView
         android:id="@+id/game_title2"
         android:gravity="center_horizontal"

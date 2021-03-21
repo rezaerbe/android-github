@@ -1,12 +1,12 @@
 package com.erbe.github.ui.user
 
-import com.erbe.github.testing.OpenForTesting
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.switchMap
 import com.erbe.github.repository.RepoRepository
 import com.erbe.github.repository.UserRepository
+import com.erbe.github.testing.OpenForTesting
 import com.erbe.github.util.AbsentLiveData
 import com.erbe.github.vo.Repo
 import com.erbe.github.vo.Resource

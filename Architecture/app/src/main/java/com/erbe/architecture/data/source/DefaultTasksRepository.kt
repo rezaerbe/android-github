@@ -5,11 +5,7 @@ import com.erbe.architecture.data.Result
 import com.erbe.architecture.data.Result.Success
 import com.erbe.architecture.data.Task
 import com.erbe.architecture.util.wrapEspressoIdlingResource
-import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 
 /**
  * Default implementation of [TasksRepository]. Single entry point for managing tasks' data.

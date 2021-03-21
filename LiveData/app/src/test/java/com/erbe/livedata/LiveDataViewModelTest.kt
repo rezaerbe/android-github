@@ -9,13 +9,11 @@ import com.erbe.livedata.util.getOrAwaitValue
 import com.erbe.livedata.util.observeForTesting
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.TestCoroutineDispatcher
-import org.junit.Assert.assertEquals
-import org.junit.Assert.assertNotEquals
-import org.junit.Assert.assertTrue
+import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import java.util.Date
+import java.util.*
 
 /**
  * Unit tests for [LiveDataViewModel].

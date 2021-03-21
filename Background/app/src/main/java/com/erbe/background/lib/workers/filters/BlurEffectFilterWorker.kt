@@ -9,7 +9,7 @@ import android.renderscript.ScriptIntrinsicBlur
 import androidx.work.WorkerParameters
 
 class BlurEffectFilterWorker(context: Context, parameters: WorkerParameters) :
-        BaseFilterWorker(context, parameters) {
+    BaseFilterWorker(context, parameters) {
 
     override fun applyFilter(input: Bitmap): Bitmap {
         var rsContext: RenderScript? = null

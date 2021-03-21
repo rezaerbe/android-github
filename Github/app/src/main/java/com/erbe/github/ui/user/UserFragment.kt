@@ -14,6 +14,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.transition.TransitionInflater
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
+import com.bumptech.glide.request.target.Target
 import com.erbe.github.AppExecutors
 import com.erbe.github.R
 import com.erbe.github.binding.FragmentDataBindingComponent
@@ -22,10 +26,6 @@ import com.erbe.github.di.Injectable
 import com.erbe.github.ui.common.RepoListAdapter
 import com.erbe.github.ui.common.RetryCallback
 import com.erbe.github.util.autoCleared
-import com.bumptech.glide.load.DataSource
-import com.bumptech.glide.load.engine.GlideException
-import com.bumptech.glide.request.RequestListener
-import com.bumptech.glide.request.target.Target
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 

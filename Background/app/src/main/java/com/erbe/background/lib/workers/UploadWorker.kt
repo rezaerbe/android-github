@@ -15,7 +15,7 @@ import com.erbe.background.lib.imgur.ImgurApi
  * Uploads an image to Imgur using the [ImgurApi].
  */
 class UploadWorker(appContext: Context, workerParams: WorkerParameters) :
-        Worker(appContext, workerParams) {
+    Worker(appContext, workerParams) {
 
     override fun doWork(): Result {
         var imageUriInput: String? = null
@@ -39,8 +39,8 @@ class UploadWorker(appContext: Context, workerParams: WorkerParameters) :
                     val imgurLink = imageResponse.data!!.link
                     // Set the result of the worker by calling setOutputData().
                     outputData = Data.Builder()
-                            .putString(Constants.KEY_IMAGE_URI, imgurLink)
-                            .build()
+                        .putString(Constants.KEY_IMAGE_URI, imgurLink)
+                        .build()
                 }
                 Result.success(outputData)
             }

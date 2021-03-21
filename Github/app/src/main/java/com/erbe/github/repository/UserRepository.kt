@@ -1,10 +1,10 @@
 package com.erbe.github.repository
 
-import com.erbe.github.testing.OpenForTesting
 import androidx.lifecycle.LiveData
 import com.erbe.github.AppExecutors
 import com.erbe.github.api.GithubService
 import com.erbe.github.db.UserDao
+import com.erbe.github.testing.OpenForTesting
 import com.erbe.github.vo.Resource
 import com.erbe.github.vo.User
 import javax.inject.Inject

@@ -1,12 +1,7 @@
 package com.erbe.architecture.taskdetail
 
 import androidx.annotation.StringRes
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.map
-import androidx.lifecycle.switchMap
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.erbe.architecture.Event
 import com.erbe.architecture.R
 import com.erbe.architecture.data.Result

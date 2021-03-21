@@ -1,13 +1,13 @@
 package com.erbe.github.db
 
 import android.util.SparseIntArray
-import com.erbe.github.testing.OpenForTesting
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.map
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.erbe.github.testing.OpenForTesting
 import com.erbe.github.vo.Contributor
 import com.erbe.github.vo.Repo
 import com.erbe.github.vo.RepoSearchResult

@@ -16,7 +16,7 @@ import java.util.*
  * Saves an output image to the [MediaStore].
  */
 class SaveImageToGalleryWorker(appContext: Context, workerParams: WorkerParameters) :
-        Worker(appContext, workerParams) {
+    Worker(appContext, workerParams) {
 
     override fun doWork(): Result {
         val resolver = applicationContext.contentResolver
@@ -24,15 +24,16 @@ class SaveImageToGalleryWorker(appContext: Context, workerParams: WorkerParamete
             val resourceUri = Uri.parse(inputData.getString(Constants.KEY_IMAGE_URI))
             val bitmap = BitmapFactory.decodeStream(resolver.openInputStream(resourceUri))
             val imageUrl = MediaStore.Images.Media.insertImage(
-                    resolver, bitmap, DATE_FORMATTER.format(Date()), TITLE)
+                resolver, bitmap, DATE_FORMATTER.format(Date()), TITLE
+            )
             if (imageUrl.isEmpty()) {
                 Log.e(TAG, "Writing to MediaStore failed")
                 Result.failure()
             }
             // Set the result of the worker by calling setOutputData().
             val output = Data.Builder()
-                    .putString(Constants.KEY_IMAGE_URI, imageUrl)
-                    .build()
+                .putString(Constants.KEY_IMAGE_URI, imageUrl)
+                .build()
             Result.success(output)
         } catch (exception: Exception) {
             Log.e(TAG, "Unable to save image to Gallery", exception)
@@ -44,6 +45,6 @@ class SaveImageToGalleryWorker(appContext: Context, workerParams: WorkerParamete
         private const val TAG = "SvImageToGalleryWrkr"
         private const val TITLE = "Filtered Image"
         private val DATE_FORMATTER =
-                SimpleDateFormat("yyyy.MM.dd 'at' HH:mm:ss z", Locale.getDefault())
+            SimpleDateFormat("yyyy.MM.dd 'at' HH:mm:ss z", Locale.getDefault())
     }
 }

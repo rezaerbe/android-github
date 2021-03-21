@@ -4,7 +4,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
         <import type="com.erbe.github.vo.Status" />
 
         <import type="com.erbe.github.vo.Resource" />

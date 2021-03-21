@@ -1,17 +1,14 @@
 package com.erbe.github.ui.search
 
-import com.erbe.github.testing.OpenForTesting
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.*
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.switchMap
 import com.erbe.github.repository.RepoRepository
+import com.erbe.github.testing.OpenForTesting
 import com.erbe.github.util.AbsentLiveData
 import com.erbe.github.vo.Repo
 import com.erbe.github.vo.Resource
 import com.erbe.github.vo.Status
-import java.util.Locale
+import java.util.*
 import javax.inject.Inject
 
 @OpenForTesting

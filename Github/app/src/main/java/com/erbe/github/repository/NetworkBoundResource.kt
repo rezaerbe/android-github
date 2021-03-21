@@ -1,9 +1,9 @@
 package com.erbe.github.repository
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
 import androidx.annotation.MainThread
 import androidx.annotation.WorkerThread
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
 import com.erbe.github.AppExecutors
 import com.erbe.github.api.ApiEmptyResponse
 import com.erbe.github.api.ApiErrorResponse

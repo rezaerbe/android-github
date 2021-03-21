@@ -1,6 +1,5 @@
 package com.erbe.github.repository
 
-import com.erbe.github.testing.OpenForTesting
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.switchMap
 import com.erbe.github.AppExecutors
@@ -9,6 +8,7 @@ import com.erbe.github.api.GithubService
 import com.erbe.github.api.RepoSearchResponse
 import com.erbe.github.db.GithubDb
 import com.erbe.github.db.RepoDao
+import com.erbe.github.testing.OpenForTesting
 import com.erbe.github.util.AbsentLiveData
 import com.erbe.github.util.RateLimiter
 import com.erbe.github.vo.Contributor

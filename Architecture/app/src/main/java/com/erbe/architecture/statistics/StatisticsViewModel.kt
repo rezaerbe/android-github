@@ -1,10 +1,6 @@
 package com.erbe.architecture.statistics
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.map
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.erbe.architecture.data.Result
 import com.erbe.architecture.data.Result.Error
 import com.erbe.architecture.data.Result.Success
@@ -33,7 +29,8 @@ class StatisticsViewModel @Inject constructor(
     }
 
     val activeTasksPercent = stats.map {
-        it?.activeTasksPercent ?: 0f }
+        it?.activeTasksPercent ?: 0f
+    }
     val completedTasksPercent: LiveData<Float> = stats.map { it?.completedTasksPercent ?: 0f }
     val dataLoading: LiveData<Boolean> = _dataLoading
     val error: LiveData<Boolean> = tasks.map { it is Error }

@@ -65,4 +65,3 @@ class CheeseAdapter : PagingDataAdapter<CheeseListItem, CheeseViewHolder>(diffCa
         }
     }
 }
-

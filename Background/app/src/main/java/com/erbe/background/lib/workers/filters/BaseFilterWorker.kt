@@ -15,25 +15,21 @@ import android.util.Log
 import androidx.annotation.StringRes
 import androidx.annotation.VisibleForTesting
 import androidx.core.app.NotificationCompat.Builder
-import androidx.work.CoroutineWorker
-import androidx.work.ForegroundInfo
-import androidx.work.WorkManager
-import androidx.work.WorkerParameters
-import androidx.work.workDataOf
+import androidx.work.*
 import com.erbe.background.R
 import com.erbe.background.lib.Constants
 import java.io.*
 import java.util.*
 
 abstract class BaseFilterWorker(context: Context, parameters: WorkerParameters) :
-        CoroutineWorker(context, parameters) {
+    CoroutineWorker(context, parameters) {
 
     private val notificationManager =
-            context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
     override suspend fun doWork(): Result {
         val resourceUri = inputData.getString(Constants.KEY_IMAGE_URI)
-                ?: throw IllegalArgumentException("Invalid input uri")
+            ?: throw IllegalArgumentException("Invalid input uri")
         return try {
             setForeground(createForegroundInfo())
             val inputStream = inputStreamFor(applicationContext, resourceUri)
@@ -60,7 +56,7 @@ abstract class BaseFilterWorker(context: Context, parameters: WorkerParameters) 
      * @return a [Uri] to the output [Bitmap].
      */
     private fun writeBitmapToFile(
-            bitmap: Bitmap
+        bitmap: Bitmap
     ): Uri {
 
         // Bitmaps are being written to a temporary directory. This is so they can serve as inputs
@@ -107,11 +103,11 @@ abstract class BaseFilterWorker(context: Context, parameters: WorkerParameters) 
         val intent = WorkManager.getInstance(applicationContext).createCancelPendingIntent(id)
 
         val builder = Builder(applicationContext, channelId)
-                .setContentTitle(title)
-                .setTicker(title)
-                .setSmallIcon(R.drawable.baseline_gradient)
-                .setOngoing(true)
-                .addAction(drawable.ic_delete, cancel, intent)
+            .setContentTitle(title)
+            .setTicker(title)
+            .setSmallIcon(R.drawable.baseline_gradient)
+            .setOngoing(true)
+            .addAction(drawable.ic_delete, cancel, intent)
         if (VERSION.SDK_INT >= VERSION_CODES.O) {
             createNotificationChannel(channelId, name).also {
                 builder.setChannelId(it.id)
@@ -128,11 +124,11 @@ abstract class BaseFilterWorker(context: Context, parameters: WorkerParameters) 
      */
     @TargetApi(VERSION_CODES.O)
     private fun createNotificationChannel(
-            channelId: String,
-            name: String
+        channelId: String,
+        name: String
     ): NotificationChannel {
         return NotificationChannel(
-                channelId, name, NotificationManager.IMPORTANCE_LOW
+            channelId, name, NotificationManager.IMPORTANCE_LOW
         ).also { channel ->
             notificationManager.createNotificationChannel(channel)
         }
@@ -151,8 +147,8 @@ abstract class BaseFilterWorker(context: Context, parameters: WorkerParameters) 
          */
         @VisibleForTesting
         fun inputStreamFor(
-                context: Context,
-                resourceUri: String
+            context: Context,
+            resourceUri: String
         ): InputStream? {
 
             // If the resourceUri is an Android asset URI, then use AssetManager to get a handle to

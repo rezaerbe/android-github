@@ -1,6 +1,5 @@
 package com.erbe.github.db
 
-
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.erbe.github.vo.Contributor

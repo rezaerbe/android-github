@@ -1,6 +1,5 @@
 package com.erbe.github.api
 
-
 import com.erbe.github.vo.Repo
 import com.google.gson.annotations.SerializedName
 

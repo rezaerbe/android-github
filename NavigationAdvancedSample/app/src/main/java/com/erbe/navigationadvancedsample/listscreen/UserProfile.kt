@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import com.erbe.navigationadvancedsample.R
 import com.erbe.navigationadvancedsample.listscreen.MyAdapter.Companion.USERNAME_KEY
 
-
 /**
  * Shows a profile screen for a user, taking the name from the arguments.
  */

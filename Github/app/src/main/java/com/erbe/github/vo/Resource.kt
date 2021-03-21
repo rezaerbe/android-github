@@ -1,8 +1,6 @@
 package com.erbe.github.vo
 
-import com.erbe.github.vo.Status.ERROR
-import com.erbe.github.vo.Status.LOADING
-import com.erbe.github.vo.Status.SUCCESS
+import com.erbe.github.vo.Status.*
 
 /**
  * A generic class that holds a value with its loading status.

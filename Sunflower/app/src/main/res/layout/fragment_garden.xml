@@ -4,11 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="hasPlantings"
             type="boolean" />
-
     </data>
 
     <FrameLayout

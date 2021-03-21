@@ -9,21 +9,11 @@ import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.doesNotExist
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers.hasDescendant
-import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
-import androidx.test.espresso.matcher.ViewMatchers.withId
-import androidx.test.espresso.matcher.ViewMatchers.withText
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.erbe.github.R
 import com.erbe.github.binding.FragmentBindingAdapters
-import com.erbe.github.util.CountingAppExecutorsRule
-import com.erbe.github.util.DataBindingIdlingResourceRule
-import com.erbe.github.util.RecyclerViewMatcher
-import com.erbe.github.util.TaskExecutorWithIdlingResourceRule
-import com.erbe.github.util.TestUtil
-import com.erbe.github.util.ViewModelUtil
-import com.erbe.github.util.disableProgressBarAnimations
-import com.erbe.github.util.mock
+import com.erbe.github.util.*
 import com.erbe.github.vo.Repo
 import com.erbe.github.vo.Resource
 import com.erbe.github.vo.User
@@ -33,10 +23,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.ArgumentMatchers.anyString
-import org.mockito.Mockito.`when`
-import org.mockito.Mockito.doNothing
-import org.mockito.Mockito.mock
-import org.mockito.Mockito.verify
+import org.mockito.Mockito.*
 
 @RunWith(AndroidJUnit4::class)
 class UserFragmentTest {

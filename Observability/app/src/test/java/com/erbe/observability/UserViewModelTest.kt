@@ -45,9 +45,9 @@ class UserViewModelTest {
 
         //When getting the user name
         viewModel.userName()
-                .test()
-                // The user name is empty
-                .assertNoValues()
+            .test()
+            // The user name is empty
+            .assertNoValues()
     }
 
     @Test
@@ -58,9 +58,9 @@ class UserViewModelTest {
 
         //When getting the user name
         viewModel.userName()
-                .test()
-                // The correct user name is emitted
-                .assertValue("user name")
+            .test()
+            // The correct user name is emitted
+            .assertValue("user name")
     }
 
     @Test
@@ -75,7 +75,7 @@ class UserViewModelTest {
 
         // When updating the user name
         viewModel.updateUserName(userName)
-                .test()
-                .assertComplete()
+            .test()
+            .assertComplete()
     }
 }

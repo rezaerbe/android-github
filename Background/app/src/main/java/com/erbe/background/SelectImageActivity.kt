@@ -55,17 +55,17 @@ class SelectImageActivity : AppCompatActivity() {
 
         binding.selectImage.setOnClickListener {
             val chooseIntent = Intent(
-                    Intent.ACTION_PICK,
-                    MediaStore.Images.Media.EXTERNAL_CONTENT_URI
+                Intent.ACTION_PICK,
+                MediaStore.Images.Media.EXTERNAL_CONTENT_URI
             )
             startActivityForResult(chooseIntent, REQUEST_CODE_IMAGE)
         }
 
         binding.selectStockImage.setOnClickListener {
             startActivity(
-                    FilterActivity.newIntent(
-                            this@SelectImageActivity, StockImages.randomStockImage()
-                    )
+                FilterActivity.newIntent(
+                    this@SelectImageActivity, StockImages.randomStockImage()
+                )
             )
         }
     }
@@ -88,9 +88,9 @@ class SelectImageActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(
-            requestCode: Int,
-            permissions: Array<String>,
-            grantResults: IntArray
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
     ) {
 
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
@@ -108,15 +108,15 @@ class SelectImageActivity : AppCompatActivity() {
             if (mPermissionRequestCount < MAX_NUMBER_REQUEST_PERMISSIONS) {
                 mPermissionRequestCount += 1
                 ActivityCompat.requestPermissions(
-                        this,
-                        sPermissions.toTypedArray(),
-                        REQUEST_CODE_PERMISSIONS
+                    this,
+                    sPermissions.toTypedArray(),
+                    REQUEST_CODE_PERMISSIONS
                 )
             } else {
                 Snackbar.make(
-                        findViewById(R.id.coordinatorLayout),
-                        R.string.set_permissions_in_settings,
-                        Snackbar.LENGTH_INDEFINITE
+                    findViewById(R.id.coordinatorLayout),
+                    R.string.set_permissions_in_settings,
+                    Snackbar.LENGTH_INDEFINITE
                 ).show()
 
                 findViewById<View>(R.id.selectImage).isEnabled = false
@@ -146,7 +146,7 @@ class SelectImageActivity : AppCompatActivity() {
         var hasPermissions = true
         for (permission in sPermissions) {
             hasPermissions = hasPermissions and (ContextCompat.checkSelfPermission(
-                    this, permission
+                this, permission
             ) == PackageManager.PERMISSION_GRANTED)
         }
         return hasPermissions

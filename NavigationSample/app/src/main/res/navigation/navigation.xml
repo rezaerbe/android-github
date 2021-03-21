@@ -9,6 +9,7 @@
         android:name="com.erbe.navigationsample.TitleScreen"
         android:label="fragment_title_screen"
         tools:layout="@layout/fragment_title_screen">
+
         <action
             android:id="@+id/action_title_screen_to_register"
             app:destination="@id/register"
@@ -16,6 +17,7 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
         <action
             android:id="@+id/action_title_screen_to_leaderboard"
             app:destination="@id/leaderboard"
@@ -23,12 +25,15 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
     </fragment>
+
     <fragment
         android:id="@+id/register"
         android:name="com.erbe.navigationsample.Register"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register">
+
         <action
             android:id="@+id/action_register_to_match"
             app:destination="@id/match"
@@ -36,12 +41,15 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
     </fragment>
+
     <fragment
         android:id="@+id/leaderboard"
         android:name="com.erbe.navigationsample.Leaderboard"
         android:label="fragment_leaderboard"
         tools:layout="@layout/fragment_leaderboard">
+
         <action
             android:id="@+id/action_leaderboard_to_userProfile"
             app:destination="@id/user_profile"
@@ -49,12 +57,15 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
     </fragment>
+
     <fragment
         android:id="@+id/match"
         android:name="com.erbe.navigationsample.Match"
         android:label="fragment_match"
         tools:layout="@layout/fragment_match">
+
         <action
             android:id="@+id/action_match_to_in_game"
             app:destination="@id/in_game"
@@ -62,22 +73,29 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
     </fragment>
+
     <fragment
         android:id="@+id/user_profile"
         android:name="com.erbe.navigationsample.UserProfile"
         android:label="fragment_user_profile"
         tools:layout="@layout/fragment_user_profile">
+
         <argument
             android:name="userName"
             android:defaultValue="name" />
+
         <deepLink app:uri="www.example.com/user/{userName}" />
+
     </fragment>
+
     <fragment
         android:id="@+id/in_game"
         android:name="com.erbe.navigationsample.InGame"
         android:label="Game"
         tools:layout="@layout/fragment_in_game">
+
         <action
             android:id="@+id/action_in_game_to_resultsWinner"
             app:destination="@id/results_winner"
@@ -87,6 +105,7 @@
             app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@+id/match"
             app:popUpToInclusive="false" />
+
         <action
             android:id="@+id/action_in_game_to_gameOver"
             app:destination="@id/game_over"
@@ -96,11 +115,14 @@
             app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@id/match"
             app:popUpToInclusive="false" />
+
     </fragment>
+
     <fragment
         android:id="@+id/results_winner"
         android:name="com.erbe.navigationsample.ResultsWinner"
         tools:layout="@layout/fragment_results_winner">
+
         <action
             android:id="@+id/action_results_winner_to_leaderboard"
             app:destination="@id/leaderboard"
@@ -109,17 +131,23 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
             app:popUpTo="@id/title_screen" />
+
         <action
             android:id="@+id/action_results_winner_to_match"
             app:popUpTo="@id/match" />
+
     </fragment>
+
     <fragment
         android:id="@+id/game_over"
         android:name="com.erbe.navigationsample.GameOver"
         android:label="fragment_game_over"
         tools:layout="@layout/fragment_game_over">
+
         <action
             android:id="@+id/action_game_over_to_match"
             app:popUpTo="@id/match" />
+
     </fragment>
+
 </navigation>

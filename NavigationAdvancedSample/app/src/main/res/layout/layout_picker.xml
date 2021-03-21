@@ -99,4 +99,5 @@
         app:srcCompat="@drawable/circle"
         tools:background="@tools:sample/avatars"
         tools:srcCompat="@drawable/circle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

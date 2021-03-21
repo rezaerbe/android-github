@@ -1,11 +1,11 @@
 package com.erbe.github.ui.repo
 
-import androidx.databinding.DataBindingComponent
-import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.DiffUtil
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.databinding.DataBindingComponent
+import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.DiffUtil
 import com.erbe.github.AppExecutors
 import com.erbe.github.R
 import com.erbe.github.databinding.ContributorItemBinding

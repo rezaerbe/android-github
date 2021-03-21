@@ -18,41 +18,49 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class UserDaoTest {
 
-    @get:Rule var instantTaskExecutorRule = InstantTaskExecutorRule()
+    @get:Rule
+    var instantTaskExecutorRule = InstantTaskExecutorRule()
 
     private lateinit var database: UsersDatabase
 
-    @Before fun initDb() {
+    @Before
+    fun initDb() {
         // using an in-memory database because the information stored here disappears after test
-        database = Room.inMemoryDatabaseBuilder(ApplicationProvider.getApplicationContext(),
-                UsersDatabase::class.java)
-                // allowing main thread queries, just for testing
-                .allowMainThreadQueries()
-                .build()
+        database = Room.inMemoryDatabaseBuilder(
+            ApplicationProvider.getApplicationContext(),
+            UsersDatabase::class.java
+        )
+            // allowing main thread queries, just for testing
+            .allowMainThreadQueries()
+            .build()
     }
 
-    @After fun closeDb() {
+    @After
+    fun closeDb() {
         database.close()
     }
 
-    @Test fun getUsersWhenNoUserInserted() {
+    @Test
+    fun getUsersWhenNoUserInserted() {
         database.userDao().getUserById("123")
-                .test()
-                .assertNoValues()
+            .test()
+            .assertNoValues()
     }
 
-    @Test fun insertAndGetUser() {
+    @Test
+    fun insertAndGetUser() {
         // When inserting a new user in the data source
         database.userDao().insertUser(USER).blockingAwait()
 
         // When subscribing to the emissions of the user
         database.userDao().getUserById(USER.id)
-                .test()
-                // assertValue asserts that there was only one emission of the user
-                .assertValue { it.id == USER.id && it.userName == USER.userName }
+            .test()
+            // assertValue asserts that there was only one emission of the user
+            .assertValue { it.id == USER.id && it.userName == USER.userName }
     }
 
-    @Test fun updateAndGetUser() {
+    @Test
+    fun updateAndGetUser() {
         // Given that we have a user in the data source
         database.userDao().insertUser(USER).blockingAwait()
 
@@ -62,12 +70,13 @@ class UserDaoTest {
 
         // When subscribing to the emissions of the user
         database.userDao().getUserById(USER.id)
-                .test()
-                // assertValue asserts that there was only one emission of the user
-                .assertValue { it.id == USER.id && it.userName == "new username" }
+            .test()
+            // assertValue asserts that there was only one emission of the user
+            .assertValue { it.id == USER.id && it.userName == "new username" }
     }
 
-    @Test fun deleteAndGetUser() {
+    @Test
+    fun deleteAndGetUser() {
         // Given that we have a user in the data source
         database.userDao().insertUser(USER).blockingAwait()
 
@@ -75,9 +84,9 @@ class UserDaoTest {
         database.userDao().deleteAllUsers()
         // When subscribing to the emissions of the user
         database.userDao().getUserById(USER.id)
-                .test()
-                // check that there's no user emitted
-                .assertNoValues()
+            .test()
+            // check that there's no user emitted
+            .assertNoValues()
     }
 
     companion object {

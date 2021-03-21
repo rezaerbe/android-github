@@ -5,7 +5,7 @@ import androidx.test.espresso.IdlingResource
 import com.erbe.github.AppExecutors
 import org.junit.rules.TestWatcher
 import org.junit.runner.Description
-import java.util.UUID
+import java.util.*
 import java.util.concurrent.CopyOnWriteArrayList
 import java.util.concurrent.TimeUnit
 

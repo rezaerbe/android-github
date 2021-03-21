@@ -16,6 +16,7 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
     </fragment>
 
     <fragment
@@ -31,9 +32,11 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
         <argument
             android:name="plantId"
             app:argType="string" />
+
     </fragment>
 
     <fragment
@@ -41,9 +44,11 @@
         android:name="com.erbe.sunflower.GalleryFragment"
         android:label="@string/plant_details_title"
         tools:layout="@layout/fragment_gallery">
+
         <argument
             android:name="plantName"
             app:argType="string" />
+
     </fragment>
 
 </navigation>

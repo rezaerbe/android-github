@@ -33,4 +33,3 @@ class CheeseViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
         nameView.text = item?.name
     }
 }
-

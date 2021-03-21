@@ -25,5 +25,4 @@ class DataBindingIdlingResourceRule() : TestWatcher() {
         IdlingRegistry.getInstance().register(idlingResource)
         super.starting(description)
     }
-
 }

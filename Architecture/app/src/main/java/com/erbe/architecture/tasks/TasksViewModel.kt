@@ -2,14 +2,7 @@ package com.erbe.architecture.tasks
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.SavedStateHandle
-import androidx.lifecycle.Transformations
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.distinctUntilChanged
-import androidx.lifecycle.switchMap
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.erbe.architecture.Event
 import com.erbe.architecture.R
 import com.erbe.architecture.data.Result
@@ -17,9 +10,7 @@ import com.erbe.architecture.data.Result.Success
 import com.erbe.architecture.data.Task
 import com.erbe.architecture.data.source.TasksDataSource
 import com.erbe.architecture.data.source.TasksRepository
-import com.erbe.architecture.tasks.TasksFilterType.ACTIVE_TASKS
-import com.erbe.architecture.tasks.TasksFilterType.ALL_TASKS
-import com.erbe.architecture.tasks.TasksFilterType.COMPLETED_TASKS
+import com.erbe.architecture.tasks.TasksFilterType.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -220,7 +211,7 @@ class TasksViewModel @Inject constructor(
             }
         }
         return tasksToShow
-        }
+    }
 
     fun refresh() {
         _forceUpdate.value = true

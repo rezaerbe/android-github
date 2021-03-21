@@ -50,9 +50,9 @@ class FilterActivity : AppCompatActivity() {
                 val save = save.isChecked
 
                 val imageOperations = ImageOperations(
-                        applicationContext, imageUri,
-                        applyWaterColor, applyGrayScale, applyBlur,
-                        save
+                    applicationContext, imageUri,
+                    applyWaterColor, applyGrayScale, applyBlur,
+                    save
                 )
 
                 viewModel.apply(imageOperations)
@@ -74,7 +74,7 @@ class FilterActivity : AppCompatActivity() {
         if (listOfInfos == null || listOfInfos.isEmpty()) {
             return
         }
-        
+
         val info = listOfInfos[0]
         val finished = info.state.isFinished
 
@@ -107,8 +107,8 @@ class FilterActivity : AppCompatActivity() {
          * @return the instance of [Intent].
          */
         internal fun newIntent(context: Context, imageUri: Uri) =
-                Intent(context, FilterActivity::class.java).putExtra(
-                        Constants.KEY_IMAGE_URI, imageUri.toString()
-                )
+            Intent(context, FilterActivity::class.java).putExtra(
+                Constants.KEY_IMAGE_URI, imageUri.toString()
+            )
     }
 }

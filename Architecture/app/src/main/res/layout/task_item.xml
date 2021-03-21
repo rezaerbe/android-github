@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <import type="android.widget.CompoundButton" />
 
         <variable
@@ -43,5 +42,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             android:text="@{task.titleForList}"
             app:completedTask="@{task.completed}" />
+
     </LinearLayout>
+
 </layout>

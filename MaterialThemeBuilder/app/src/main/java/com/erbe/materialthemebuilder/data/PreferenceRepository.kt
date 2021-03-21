@@ -21,11 +21,11 @@ class PreferenceRepository(private val sharedPreferences: SharedPreferences) {
         get() = nightMode == AppCompatDelegate.MODE_NIGHT_YES
         set(value) {
             sharedPreferences.edit().putInt(
-              PREFERENCE_NIGHT_MODE, if (value) {
-                AppCompatDelegate.MODE_NIGHT_YES
-              } else {
-                AppCompatDelegate.MODE_NIGHT_NO
-              }
+                PREFERENCE_NIGHT_MODE, if (value) {
+                    AppCompatDelegate.MODE_NIGHT_YES
+                } else {
+                    AppCompatDelegate.MODE_NIGHT_NO
+                }
             ).apply()
             field = value
         }
@@ -37,10 +37,10 @@ class PreferenceRepository(private val sharedPreferences: SharedPreferences) {
     private val preferenceChangedListener =
         SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
             when (key) {
-              PREFERENCE_NIGHT_MODE -> {
-                _nightModeLive.value = nightMode
-                _isDarkThemeLive.value = isDarkTheme
-              }
+                PREFERENCE_NIGHT_MODE -> {
+                    _nightModeLive.value = nightMode
+                    _isDarkThemeLive.value = isDarkTheme
+                }
             }
         }
 

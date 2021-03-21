@@ -11,7 +11,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         preferenceRepository = PreferenceRepository(
-          getSharedPreferences(DEFAULT_PREFERENCES, Context.MODE_PRIVATE)
+            getSharedPreferences(DEFAULT_PREFERENCES, Context.MODE_PRIVATE)
         )
     }
 

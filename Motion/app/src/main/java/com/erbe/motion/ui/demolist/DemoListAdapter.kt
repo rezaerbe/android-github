@@ -1,6 +1,5 @@
 package com.erbe.motion.ui.demolist
 
-
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView

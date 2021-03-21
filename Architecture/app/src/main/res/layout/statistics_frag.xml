@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <import type="android.view.View" />
 
         <variable
@@ -62,7 +61,9 @@
                     android:visibility="@{viewmodel.empty ? View.GONE : View.VISIBLE}" />
 
             </LinearLayout>
+
         </LinearLayout>
 
     </com.erbe.architecture.ScrollChildSwipeRefreshLayout>
+
 </layout>

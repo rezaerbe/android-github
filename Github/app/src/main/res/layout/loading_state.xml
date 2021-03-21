@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <import type="com.erbe.github.vo.Resource" />
 
         <import type="com.erbe.github.vo.Status" />

@@ -8,12 +8,8 @@ import com.erbe.github.api.GithubService
 import com.erbe.github.api.RepoSearchResponse
 import com.erbe.github.db.GithubDb
 import com.erbe.github.db.RepoDao
-import com.erbe.github.util.AbsentLiveData
+import com.erbe.github.util.*
 import com.erbe.github.util.ApiUtil.successCall
-import com.erbe.github.util.InstantAppExecutors
-import com.erbe.github.util.TestUtil
-import com.erbe.github.util.argumentCaptor
-import com.erbe.github.util.mock
 import com.erbe.github.vo.Contributor
 import com.erbe.github.vo.Repo
 import com.erbe.github.vo.RepoSearchResult
@@ -26,14 +22,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 import org.mockito.ArgumentMatchers
-import org.mockito.Mockito.`when`
-import org.mockito.Mockito.anyList
-import org.mockito.Mockito.anyString
-import org.mockito.Mockito.mock
-import org.mockito.Mockito.never
-import org.mockito.Mockito.reset
-import org.mockito.Mockito.verify
-import org.mockito.Mockito.verifyNoMoreInteractions
+import org.mockito.Mockito.*
 import retrofit2.Response
 
 @RunWith(JUnit4::class)

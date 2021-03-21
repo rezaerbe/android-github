@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.erbe.navigationadvancedsample.R
 
-
 /**
  * Shows a register form to showcase UI state persistence. It has a button that goes to [Registered]
  */

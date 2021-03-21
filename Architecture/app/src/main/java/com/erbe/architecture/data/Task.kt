@@ -3,7 +3,7 @@ package com.erbe.architecture.data
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.UUID
+import java.util.*
 
 /**
  * Immutable model class for a Task. In order to compile with Room, we can't use @JvmOverloads to

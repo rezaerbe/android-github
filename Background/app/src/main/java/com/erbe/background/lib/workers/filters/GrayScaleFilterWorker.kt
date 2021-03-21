@@ -8,7 +8,7 @@ import androidx.work.WorkerParameters
 import com.erbe.background.ScriptC_grayscale
 
 class GrayScaleFilterWorker(context: Context, parameters: WorkerParameters) :
-        BaseFilterWorker(context, parameters) {
+    BaseFilterWorker(context, parameters) {
 
     override fun applyFilter(input: Bitmap): Bitmap {
         var rsContext: RenderScript? = null

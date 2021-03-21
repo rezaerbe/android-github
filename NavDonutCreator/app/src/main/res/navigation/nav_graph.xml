@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/donutList">
 
     <fragment
         android:id="@+id/donutList"
         android:name="com.erbe.navdonutcreator.DonutList"
         android:label="DonutList">
+
         <action
             android:id="@+id/action_donutList_to_donutEntryDialogFragment"
             app:destination="@id/donutEntryDialogFragment" />
+
     </fragment>
+
     <dialog
         android:id="@+id/donutEntryDialogFragment"
         android:name="com.erbe.navdonutcreator.DonutEntryDialogFragment"
         android:label="DonutEntryDialogFragment">
+
         <deepLink app:uri="myapp://navdonutcreator.com/donutcreator" />
+
         <argument
             android:name="itemId"
             app:argType="long"
             android:defaultValue="-1L" />
+
     </dialog>
+
 </navigation>
